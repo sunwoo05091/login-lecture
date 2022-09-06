@@ -13,6 +13,9 @@ const id = document.querySelector("#id"),
         id : id.value,
         pw : pw.value,
     };
-
+    console.log(req);
+    fetch("/login", {
+        body : JSON.stringify(req)
+    })
     console.log(req);
  }
