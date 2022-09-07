@@ -23,6 +23,15 @@ function login(){
         body : JSON.stringify(req)
     })
     .then((res) => res.json())
-    .then(console.log);
+    .then((res) => {
+        if(res.success){
+            location.href = "/";
+        }else{
+            alert(res.msg);
+        }
+    })
+    .catch((err) =>{
+        console.error('Login error')
+    })
 }
 
