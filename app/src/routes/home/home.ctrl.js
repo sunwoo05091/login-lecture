@@ -19,7 +19,6 @@ const process = {
         const response = user.login();
         console.log(response);
         return res.json(response);
-        aaa
     //     const id = req.body.id,
     //           pw = req.body.pw;
 
