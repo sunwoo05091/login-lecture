@@ -18,6 +18,17 @@ class UserStorage {
         },{});
         return newUsers;
     }
+
+    static getUserInfo(id){
+        const users = this.#users;
+        const idx = users.id.indexOf(id);//로그인 시도한 아이디값 위치
+        const userKeys = Object.keys(users);
+        const UserInfo = userKeys.reduce((newUser, Info) =>{
+            newUser[Info] = users[Info][idx];
+            return newUser;
+        },{});
+        return UserInfo;
+    }
 };
 
 
